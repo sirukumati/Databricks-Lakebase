@@ -37,11 +37,11 @@ jobs:
         run: databricks bundle deploy --target dev
 
       - name: Start or restart app
-        run: databricks bundle run my_app --target dev
+        run: databricks bundle run lakebase_autoscaling_app --target dev
         
       - name: Wait for app to be running
         env:
-          APP_NAME: my-app
+          APP_NAME: lakebase-autoscaling-app
         run: |
           for i in $(seq 1 20); do
             STATE=$(databricks apps get "$APP_NAME" --output json | jq -r '.app_status.state')
