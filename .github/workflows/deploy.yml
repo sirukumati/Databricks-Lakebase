@@ -34,7 +34,7 @@ jobs:
         run: databricks bundle validate --target dev
         
       - name: Bind Bundle
-        run: databricks bundle deployment bind todo-lakebase-app lakebase_autoscaling_app --target dev --auto-approve
+        run: databricks bundle deployment bind lakebase_autoscaling_app lakebase_autoscaling_app --target dev --auto-approve
         
       - name: Deploy bundle
         run: databricks bundle deploy --target dev
