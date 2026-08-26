@@ -19,6 +19,7 @@ jobs:
       DATABRICKS_AUTH_TYPE: github-oidc
       DATABRICKS_HOST: ${{ vars.DATABRICKS_HOST }}
       DATABRICKS_CLIENT_ID: ${{ vars.DATABRICKS_CLIENT_ID }}
+      DATABRICKS_BUNDLE_ROOT: ${{vars.DATABRICKS_BUNDLE_ROOT}}
     steps:
       - uses: actions/checkout@v4
 
