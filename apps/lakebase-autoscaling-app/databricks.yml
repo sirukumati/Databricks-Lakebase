@@ -1,5 +1,10 @@
 bundle:
   name: lakebase_autoscaling_app
-
+targets:
+   dev:
+    default: true
+    mode: development
+    workspace:
+      host: https://adb-7405609267476451.11.azuredatabricks.net/
 include:
   - resources/*.yml
