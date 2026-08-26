@@ -1,0 +1,18 @@
+resources:
+  apps:
+    lakebase_autoscaling_app:
+      name: lakebase-autoscaling-app
+      description: A basic todo application which stores tasks in an autoscaling postgres database hosted on Databricks.
+      git_repository:
+        provider: github
+        url: https://github.com/sirukumati/Databricks-Lakebase
+      git_source:
+        branch: main
+        source_code_path: apps/lakebase-autoscaling-app
+      resources:
+        - description: The database the app uses to store and retrieve todo tasks.
+          name: postgres
+          postgres:
+            branch: projects/demo-lakebase/branches/production
+            database: projects/demo-lakebase/branches/production/databases/databricks-postgres
+            permission: CAN_CONNECT_AND_CREATE

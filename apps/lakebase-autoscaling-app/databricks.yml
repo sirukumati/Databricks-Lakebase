@@ -1,0 +1,5 @@
+bundle:
+  name: lakebase_autoscaling_app
+
+include:
+  - resources/*.yml
